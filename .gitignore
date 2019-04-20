@@ -1,0 +1,8 @@
+# All ignore
+*
+!.gitignore
+!.env.example
+!README.md
+!docker-compose.yml
+!Dockerfile
+!src/*
