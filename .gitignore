@@ -1,8 +1,13 @@
-# All ignore
+# All file ignore
 *
+# Directory
+!*/
+
 !.gitignore
 !.env.example
 !README.md
 !docker-compose.yml
 !Dockerfile
-!src/*
+!src/entrypoint.sh
+!src/Gemfile
+!src/Gemfile.lock

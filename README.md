@@ -7,7 +7,7 @@ This program is a Dockerfile template optimized for developing Rails using docke
 1. If you want to create a new project, please execute the following command.
 
 ```bash
-$ docker-compose run web rails new . --force --no-deps --database=mysql
+$ docker-compose run web bundle exec rails new . --force --no-deps --database=mysql
 ```
 
 2. Then execute the following command to create a container.
