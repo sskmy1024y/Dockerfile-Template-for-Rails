@@ -2,6 +2,13 @@
 This program is a Dockerfile template optimized for developing Rails using docker.
 
 ## How to use
+
+0. Prepare environmental variables.
+  
+```bash
+cp .env.example .env
+```
+
 ### Create new project
 
 1. If you want to create a new project, please execute the following command.
