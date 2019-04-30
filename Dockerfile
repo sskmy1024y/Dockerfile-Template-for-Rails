@@ -14,8 +14,6 @@ COPY src/Gemfile.lock Gemfile.lock
 
 RUN gem install bundler && bundle install --clean
 
-ADD src /myapp
-
 # Add a script to be executed every time the container starts.
 COPY src/entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
