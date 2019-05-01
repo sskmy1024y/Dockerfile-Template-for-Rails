@@ -23,7 +23,12 @@ $ docker-compose run web bundle exec rails new . --force --skip-bundle --databas
 $ docker-compose build
 ```
 
-3. And you should change `database.yml`.
+~~3. And you should change `database.yml`.~~
+3. Run move `database.yml`
+
+```bash
+$ mv ./src/database.yml ./src/config/
+```
 
 ```yml
 default: &default
@@ -50,7 +55,7 @@ production:
 
 ```
 
-4. Create a database
+1. Create a database
 ```bash
 $ docker-compose run web bundle exec rails db:create
 ```
@@ -61,3 +66,6 @@ If you want to run a project that already exists, please execute the following c
 ```bash
 $ docker-compose build
 ```
+
+### Last fix `gitignore`
+

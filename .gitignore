@@ -11,3 +11,4 @@
 !src/entrypoint.sh
 !src/Gemfile
 !src/Gemfile.lock
+!src/database.yml
