@@ -1,10 +1,11 @@
 # Dockerfile Template for Ruby on Rails
+
 This program is a Dockerfile template optimized for developing Rails using docker.
 
 ## How to use
 
 0. Prepare environmental variables.
-  
+
 ```bash
 cp .env.example .env
 ```
@@ -23,7 +24,6 @@ $ docker-compose run web bundle exec rails new . --force --skip-bundle --databas
 $ docker-compose build
 ```
 
-~~3. And you should change `database.yml`.~~
 3. Run move `database.yml`
 
 ```bash
@@ -52,20 +52,26 @@ production:
   database: <%= ENV.fetch('MYSQL_DATABASE') { 'test' } %>
   username: <%= ENV.fetch('MYSQL_USER') { 'test' } %>
   password: <%= ENV.fetch('MYSQL_PASSWORD') { 'test' } %>
-
 ```
 
-1. Create a database
+4. Create a database
+
 ```bash
 $ docker-compose run web bundle exec rails db:create
 ```
 
 ### Run an existing project
+
 If you want to run a project that already exists, please execute the following command.
 
 ```bash
 $ docker-compose build
 ```
 
-### Last fix `gitignore`
+If you want to update gem bundles
 
+```bash
+$ docker-compose run web bundle install
+```
+
+### Last fix `gitignore`
